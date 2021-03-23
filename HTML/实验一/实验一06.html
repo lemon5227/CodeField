@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<base href="http://www.baidu.com" target="_blank" /> <!--页面中所有链接得默认地址-->
+		<title>关山月</title>
+		<meta name="keywords" content="HTML学习之路" /> <!-- 这个是做SEO优化时用的-->
+		<meta name="description" content="改变世界得HTML" /> <!--做SEO优化-->
+		<meta http-equiv="refresh" content="30" />
+		<link rel="stylesheet" type="text/css" href="mystyle.csss" /> <!-- 引入css样式-->
+	</head>
+	<body>
+		<center><关山月></center>
+		<canvas id="myCanvas" width="200" width="100"></canvas>
+		<h1 id="kim" class="K" style="color: red" title="这是鼠标提示">lemon</h1>
+		<a href="http://www.baidu.com" target="_blank">
+			这是一个超链接点击我可以跳转百度
+		</a>
+		<ul>
+			<li>
+				第一个列表
+			</li>
+			<li>
+				第二个列表
+			</li>
+		</ul>
+		<dl>
+			<dt>编程语言</dt>
+			<dd> C </dd>
+			<dd> JAVA </dd>
+			<dt>操作系统</dt>
+			<dd>Linux</dd>
+			<a href="http://www.baidu.com" target="_blank"><dd>windows</dd></a>
+		</dl>
+		<table border="1" cellspacing="0" cellpadding="0">
+			<tr>
+				<th>头部一</th>
+				<th>头部二</th>
+			</tr>
+			<tr>
+				<td>第一行，第一列</td>
+				<td>第一行，第二列</td>
+			</tr>
+			<tr>
+				<td>第二行，第一列</td>
+				<td>第二行，第二列</td>
+			</tr>
+		</table>
+		<div>这是一个div</div>
+		<div>
+			这是第二个div
+			<a>6666</a>	<!--这里的a标签不是块级元素，不会再新行-->
+			<p>
+				这是一个段落
+			</p>
+			<p>
+				这是第二个段落
+			</p>
+			<span>内联元素</span>
+			<span>内联元素22</span> <!--内联元素：span标签用来包裹文字。b、id、a、img通常不会以新行开始。 -->
+		</div>
+		<form>
+			<input type="text" name="username" value="lemon" />
+		</form>
+		<form>
+			password:<input type="password" name="pwd" />
+		</form>
+		<form>
+			<input type="radio" name="sex" value="male" />Male<br>
+			<input type="radio" name="sex" value="female" />Female
+		</form>
+		<form>
+			<input type="checkbox" name="vehicle" value="Bike" /> I have a bike  <br>
+			<input type="checkbox" name="vehicle" value="Car" /> I have a car
+		</form>
+		<form name="input" action="html_form_action.php" method="get">
+			Username: <input type="text" name="User" />
+			<input type="submit" value="Submit" />
+		</form>
+		<!-- iframe 框架 -->
+		<iframe src="http://www.baidu.com" width="1000px" height="1000px"></iframe>
+	</body>
+</html>
