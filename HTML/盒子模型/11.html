@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>margin设置为负数</title>
+		<style type="text/css">
+			body{
+				padding-left: 50px;
+			}
+			span{
+				font-size: 12px;
+				padding: 10px;
+				border: 10px dashed #000000;
+			}
+			span.left{
+				margin-right: 30px;
+				background-color: #a9d6ff;
+			}
+			span.right{
+				margin-left: -53px;
+				background-color: #eeb0b0;
+			}
+			.father{
+				width: 200px;
+				height: 100px;
+				background-color: #9c0;
+				margin-top: 40px;
+			}
+			.son{
+				width: 100px;
+				height: 50px;
+				border: 1px dashed #993300;
+				margin-left: -30px;
+				background-color: #0cf;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="left">行内元素1</span>
+		<span class="right">行内元素2</span>
+		<div class="father">父div <div class="son">子div </div></div>
+	</body>
+</html>

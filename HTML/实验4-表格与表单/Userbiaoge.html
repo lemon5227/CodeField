@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>userbiaoge</title>
+		<script>
+		  			function p()
+		 			{
+			 			var obj=document.f1; 
+			 			var xx= document.f1.xm;
+			 			if(xx.value=="")
+			 			{
+							alert("用户名不能为空！");
+			  				xx.focus();
+			 			}	 			
+			 			else     
+			   				obj.submit();   //将表单内容提交
+					}
+		</script>
+	</head>
+	<body>
+		<table width="500" height="510" border="1" cellspacing="0" cellpadding="0">
+		  <caption>
+		    <b>用户注册</b>
+		  </caption>
+		  <tr>
+		    <td width="126">用户名：</td>
+		    <td width="368">
+		    	<form action=" " method="post"  name="f1" >
+		          	  <input name="xm"  type="text" />
+		              <font color="#FF0000">*</font>（必填项）
+		        </form>     
+		    </td>
+		  </tr>
+		  <tr>
+		    <td>密码：</td>
+		    <td><form action=" " method="post"  name="f1" >
+		          	 <input name="mm"  type="password" />
+		              <font color="#FF0000">*</font>（必填项）
+		        </form>     </td>
+		  </tr>
+		  <tr>
+		    <td>确认密码：</td>
+		    <td><form action=" " method="post"  name="f1" >
+		          	  <input name="qr"  type="password" />
+		              <font color="#FF0000">*</font>（必填项）
+		        </form>     </td>
+		  </tr>
+		  <tr>
+		    <td>年龄：</td>
+		    <td><input name="nl"  type="number" style=" width:60px" /></td>
+		  </tr>
+		  <tr>
+		    <td>出生日期：</td>
+		    <td><input name="date" value="  年 /月/日"  type="date" size="20" /></td>
+		  </tr>
+		  <tr>
+		    <td>性别：</td>
+		    <td><input name="sex" value="男"  type="radio" />男
+		        <input name="sex" value="女"  type="radio" />女
+			</td>
+		  </tr>
+		  <tr>
+		    <td>爱好：</td>
+		    <td>
+		          	  <input name="alhao" value="音乐"  type="checkbox" />音乐
+		              <input name="alhao" value="美术"  type="checkbox" />美术
+		              <input name="alhao" value="舞蹈"  type="checkbox" />舞蹈
+		              <input name="alhao" value="健身"  type="checkbox" />健身
+		    </td>
+		  </tr>
+		  <tr>
+		    <td>你喜欢的色彩：</td>
+		    <td><input name="ys" type="color" size="10" /></td>
+		  </tr>
+		  <tr>
+		    <td>所属城市：</td>
+		    <td>
+		          	 <select name="jg">
+		                <option value="北京">北京</option>
+		                <option value="上海">上海</option>
+		                <option value="南京">南京</option>
+		                <option value="河南">河南</option>
+		                <option value="陕西">陕西</option>
+		            </select>
+		    </td>
+		  </tr>
+		  <tr>
+		    <td>上传本人照片：</td>
+		    <td><form action=" " method="post" enctype="multipart/form-data" >
+		          	 <input type="file" id="wenjian" accept="application/msword" size="10" />             
+		        </form></td>
+		  </tr>
+		  <tr>
+		    <td height="165" align="center">备注：</td>
+		    <td><textarea name="name" rows="10" cols="40" wrap="off|hand|soft" ></textarea></td>
+		  </tr>
+		  <tr>
+		    <td align="center" colspan="2"><input type="submit" value="提交" />&nbsp;&nbsp;
+		    				<input type="reset" value="重置" />&nbsp;&nbsp;
+		                    <input type="button" value="关闭" />
+		    </td>
+		  </tr>
+		</table>
+
+	</body>
+</html>

@@ -3,6 +3,9 @@
     "files.associations": {
         "iostream": "cpp",
         "xstring": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "system_error": "cpp",
+        "string": "cpp",
+        "random": "cpp"
     }
 }

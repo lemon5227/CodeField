@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="02.css" />
+	</head>
+	<script>
+		var nowImg = 1;
+		function show(d){
+			if(d){
+				nowImg = d;
+				window.clearTimeout(tid);
+			}
+			for(var i=1;i<4;i++){
+				if(nowImg==i){
+					document.getElementById("img"+i).style.display="block";
+					document.getElementById("link"+i).className="a2";
+				}
+				else{
+					document.getElementById("img"+i).style.display="none";
+					document.getElementById("link"+i).className="a1";
+				}
+			}
+			if(nowImg = 4){
+				nowImg=1;
+			}
+			else{
+				nowImg++;
+			}
+			tid=window.setTimeout("show()",2000);
+		}
+	</script>
+	<body onload="show()">
+		<div class="container">
+			<img  src="实验素材/imgs/ad-01.jpg" id="img1" style="display: none;"/>
+			<img src="实验素材/imgs/ad-02.jpg" id="img2" style="display: none;" />
+			<img src="实验素材/imgs/ad-03.jpg" id="img3" style="display: none;" />
+			<img src="实验素材/imgs/ad-04.jpg" id="img4" style="display: none;" />
+		</div>
+		<div class="link">
+			<a href="javascript:show(1):" id="link1">1</a>
+			<a href="javascript:show(2):" id="link1">2</a>
+			<a href="javascript:show(3):" id="link1">3</a>
+			<a href="javascript:show(4):" id="link1">4</a>
+		</div>
+	</body>
+</html>

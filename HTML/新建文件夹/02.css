@@ -1,0 +1,29 @@
+div{
+	border: 1px blue solid;
+}
+.container{
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+}
+.header{
+	height: 200px;
+	margin: 4px;
+}
+.leftside{
+	height: 500px;
+	width: 294px;
+	margin: 0px 2px 4px 4px;
+	float: left;
+}
+.rightside{
+	height: 500px;
+	width: 490px;
+	margin: 0px 4px 4px 2px;
+	float: right;
+}
+.footer{
+	clear: both;
+	height: 78px;
+	margin: 4px;
+}

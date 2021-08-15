@@ -1,0 +1,86 @@
+@charset "utf-8";
+@font-face{
+	font-family:ONYX;
+	src:url(font/ONYX.TTF);
+}
+@font-face{
+	font-family:TCCM;
+	src:url(font/TCCM____.TTF);
+}
+@font-face{
+	font-family:ROCK;
+	src:url(font/ROCK.TTF);
+}
+@font-face{
+	font-family:BOOMBOX;
+	src:url(font/BOOMBOX.TTF);
+}
+@font-face{
+	font-family:LTCH;
+	src:url(font/LTCH.TTF);
+}
+@font-face{
+	font-family:FZJZJW;
+	src:url(font/FZJZJW.TTF);
+}
+.one .a {
+	font-family:ONYX;
+	font-size:48px;
+	color:#333;
+}
+.one .b{
+	font-family:TCCM;
+	font-size:58px;
+	color:#4c9372;
+}
+
+.two {
+	color:#333;
+	font-family:ROCK;
+	font-weight:bold;
+}
+.two .a {
+	font-size:24px;
+	font-style:oblique;
+}
+.two .b {
+	font-size:36px;
+}
+
+h2 .a {
+	clear:#000;
+	font-size:60px;
+	font-weight:900;
+	font-family:BOOMBOX;
+}
+h2 .b{
+	color:#e1005a;
+	font-size:50px;
+	font-family:LICH;
+	font-weight:900;
+}
+
+.three {
+	font-size:36px;
+	font-family:"微软雅黑";
+}
+.three strong{
+	color:#e1005a;
+	font-weight:bold;
+}
+
+.four {
+	font-family:"微软雅黑";
+	color:#747474;
+	font-size:14px;
+	width:500px;
+	
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+*{
+	margin:0;
+	padding:0;
+}

@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.new{
+	width: 1002px;
+	margin: 10px auto;
+	height: 160px;
+}
+.new .tongzhi{
+	width: 340px;
+	float: left;
+	margin-left: 15px;
+}
+
+.new h3{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dashed #069;
+	font-size: 12px;
+	color: #06f;
+	position: relative;
+}
+
+.new h3 a{
+	text-decoration: none;
+	color: #06f;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.new ul li{
+	color: #06f;
+	font-size: 12px;
+	list-style: none;
+	height: 22px;
+	line-height: 22px;
+	background-image: url(实验素材/imgs/sanjiao.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px 8px;
+	overflow: hidden;
+	padding-left: 15px;
+}
+
+.neww ul li a{
+	color: #999;
+	text-decoration: none;
+}
+
+.new a:hover{
+	color: #f00;
+	text-decoration: underline;
+}

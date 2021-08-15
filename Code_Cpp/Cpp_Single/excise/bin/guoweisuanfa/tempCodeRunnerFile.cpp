@@ -1,2 +1,2 @@
 
-    v.erase(v.begin()+3);
+    char name[20];

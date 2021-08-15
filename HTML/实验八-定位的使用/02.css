@@ -1,0 +1,39 @@
+.wrapper{
+	width: 520px;
+	height: 280px;
+	margin: 10px auto;
+	border: 1px solid #ccc;
+	position: relative;
+}
+
+.container{
+	width: 520px;
+	height: 280px;
+}
+
+.links{
+	position: absolute;
+	right: 10px;
+	top: 90px;
+}
+
+.link a{
+	display: block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-decoration: none;
+	text-align: center;
+	margin: 5px 0px;
+	opacity: 0.7;
+}
+
+.a1{
+	color: #fff;
+	background-color: #f00;
+}
+
+.a2{
+	color: #000;
+	background-color: #ff0;
+}
