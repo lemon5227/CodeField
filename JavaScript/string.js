@@ -1,0 +1,20 @@
+let string = "this is a string I say \" ad";
+
+string;
+console.log(string);
+let a = "Font";
+let b = a+17;
+console.log(a);
+console.log(b);
+let c = typeof b;
+console.log(c);
+let d = a.length;
+console.log(a[d-1]);
+console.log(a.indexOf('on'));
+console.log(a.slice(0,2));
+console.log(a.slice(2));
+let radData = 'My NaMe Is MuD';
+console.log(radData.toLowerCase());
+console.log(radData.toUpperCase());
+a.replace('F','D');
+console.log(a.replace('F','D'));

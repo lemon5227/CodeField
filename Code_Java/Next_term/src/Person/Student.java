@@ -1,0 +1,60 @@
+package Person;
+
+public class Student extends Person {
+    private long number;
+    private int  chinese;
+    private int math;
+
+    public Student() {
+        super();
+    }
+
+    public Student(long number, int chinese, int math) {
+        super();
+        this.number = number;
+        this.chinese = chinese;
+        this.math = math;
+    }
+
+    public long getNumber() {
+        return number;
+    }
+
+    public void setNumber(long number) {
+        this.number = number;
+    }
+
+    public int getChinese() {
+        return chinese;
+    }
+
+    public void setChinese(int chinese) {
+        this.chinese = chinese;
+    }
+
+    public int getMath() {
+        return math;
+    }
+
+    public void setMath(int math) {
+        this.math = math;
+    }
+
+    @Override
+    public String toString() {
+        return "学号："+number+"\t姓名："+getName()+"\t性别："+getSex()+"\t生日："
+                +String.format("%tY年%<tm月%<td日",getBirthday())+"\t语文："+chinese+
+                "\t数学："+math+"\t平均分:"+(chinese+math)/2;
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student(89,92,90);
+        s2.setName("王五");
+        s2.setSex('女');
+        System.out.println(s1.toString());
+        System.out.println(s2.toString());
+
+
+    }
+}

@@ -6,6 +6,7 @@
         "vector": "cpp",
         "system_error": "cpp",
         "string": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "ostream": "cpp"
     }
 }
