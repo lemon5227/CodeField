@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include"bits/stdc++.h"
 using namespace std;
 int main(){
@@ -16,4 +17,16 @@ int main(){
         sum=newarr[i];
     }
     cout << sum;
+=======
+#include "bits/stdc++.h"
+using namespace std;
+int main(){
+    int fenzi=1;
+    int fenmu=1;
+    for(int i=0;i<12;i++){
+        fenzi+=2;
+        fenmu++;
+    }
+    cout << fenzi << "//" << fenmu;
+>>>>>>> 5d1e0e076a74be0957fbb4e744d8a5e214fc5614
 }
