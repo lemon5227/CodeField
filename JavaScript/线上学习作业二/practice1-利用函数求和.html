@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                width: 600px;
+                margin: auto;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            tr,td{
+                height: 50px;
+                color: blue;
+                text-align: center;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">线上学习作业二practice1：计算从数字1到我学号后四位数字的和</h1>
+        <table>
+            <tr>
+                <td>学院：</td>
+                <td>软件学院</td>
+            </tr>
+            <tr>
+                <td>姓名：</td>
+                <td>闫文博</td>
+            </tr>
+            <tr>
+                <td>学号</td>
+                <td>201451082337</td>
+            </tr>
+            <tr>
+                <td colspan="2">从数字1到我学号后4位数字(1+2+...+2337)</td>
+            </tr>
+            <tr>
+                <td>答案：</td>
+                <td id="answer"></td>
+            </tr>
+        </table>
+        <script>
+            function getSum(){
+                let a=0;
+                for(let i=1;i<=2337;i++){
+                    a+=i;
+                }
+                return a;
+            }
+            document.getElementById("answer").innerHTML = getSum();
+        </script>
+    </body>
+</html>

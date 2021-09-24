@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                width: 600px;
+                margin: auto;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            tr,td{
+                height: 50px;
+                color: blue;
+                text-align: center;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">线上学习作业二practice2:对学号包含的数字排序</h1>
+        <table>
+            <tr>
+                <td>学院：</td>
+                <td>软件学院</td>
+            </tr>
+            <tr>
+                <td>姓名：</td>
+                <td>闫文博</td>
+            </tr>
+            <tr>
+                <td>学号</td>
+                <td>201451082337</td>
+            </tr>
+            <tr>
+                <td colspan="2">学号对应的数组为[2,0,1,4,5,1,0,8,2,3,3,7]</td>
+            </tr>
+            <tr>
+                <td>排序后的顺序为：</td>
+                <td id="answer"></td>
+            </tr>
+        </table>
+        <script>
+            let arr = [2,0,1,4,5,1,0,8,2,3,3,7];
+            function Bubble(arr){
+                for(var i = 0; i < arr.length; i++){
+                    for(var j = 0; j < arr.length-i-1; j++){
+                        if(arr[j]>arr[j+1]){
+                            var temp = arr[j];
+                            arr[j] = arr[j+1];
+                            arr[j+1] = temp;
+                        }
+                    }
+                }
+                return arr;
+            }
+            document.getElementById("answer").innerHTML = Bubble(arr);;
+        </script>
+    </body>
+</html>

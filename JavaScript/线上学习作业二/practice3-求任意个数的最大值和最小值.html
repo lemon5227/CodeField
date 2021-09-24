@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                width: 600px;
+                margin: auto;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            tr,td{
+                height: 50px;
+                color: blue;
+                text-align: center;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">线上学习作业二practice3:求任意个数的最大值和最小值</h1>
+        <table>
+            <tr>
+                <td>学院：</td>
+                <td>软件学院</td>
+            </tr>
+            <tr>
+                <td>姓名：</td>
+                <td>闫文博</td>
+            </tr>
+            <tr>
+                <td>学号</td>
+                <td>201451082337</td>
+            </tr>
+            <tr>
+                <td colspan="2">把学号分成6个数字如下：20，14，51，8，23，37,求这6个数的最大值和最小值</td>
+            </tr>
+            <tr>
+                <td>最小值：</td>
+                <td id="min"></td>
+            </tr>
+            <tr>
+                <td>最大值：</td>
+                <td id="max"></td>
+            </tr>
+        </table>
+        <script>
+            function getMax(){
+                var max=-Infinity;
+                for(var i=0;i<arguments.length; i++){
+                    if(max<arguments[i]){
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            }
+
+            function getMin(){
+                var min=Infinity;
+                for(var i=0;i<arguments.length;i++){
+                    if(min>arguments[i]){
+                        min = arguments[i];
+                    }
+                }
+                return min;
+            }
+            document.getElementById("min").innerHTML = getMin(20,14,51,8,23,37);
+            document.getElementById("max").innerHTML = getMax(20,14,51,8,23,37);
+
+        </script>
+    </body>
+</html>

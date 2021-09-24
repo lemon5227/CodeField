@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.strokeStyle = 'red';
+        ctx.fillStyle = 'rgba(255,0,0,0.5)';
+        ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        
+        //ctx.strokeStyle = 'red';
+        // stc.arc(50, 50, 10, 0, 2 * Math.PI);
+        // ctx.stroke();
+    </script>
+</body>
+
+</html>

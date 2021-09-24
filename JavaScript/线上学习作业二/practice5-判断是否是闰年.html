@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            width: 600px;
+            margin: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr,
+        td {
+            height: 50px;
+            color: blue;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">线上学习作业二practice5: 判断出生年份是否为闰年</h1>
+    <table>
+        <tr>
+            <td>学院：</td>
+            <td>软件学院</td>
+        </tr>
+        <tr>
+            <td>姓名：</td>
+            <td>闫文博</td>
+        </tr>
+        <tr>
+            <td>学号</td>
+            <td>201451082337</td>
+        </tr>
+        <tr>
+            <td>出生年份：</td>
+            <td>
+                <select name="year" id='year' onchange='backDay()'>
+                    <option value='1998'>1998年</option>
+                    <option value='1999'>1999年</option>
+                    <Option value="2000">2000年</Option>
+                    <Option value="2001">2001年</Option>
+                    <Option value="2002">2002年</Option>
+                    <Option value="2003">2003年</Option>
+                    <Option value="2004">2004年</Option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>出生年份是否为闰年</td>
+            <td id="answer"></td>
+        </tr>
+    </table>
+    <script>
+        function isRunYear(year) {
+            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var str='';
+        function backDay() {
+            var year = document.getElementById("year").value;
+            if (isRunYear(year)) {
+                str = year + '年是闰年';
+            } else {
+                str = year + '年不是闰年';
+            }
+            document.getElementById("answer").innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

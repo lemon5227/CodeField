@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                width: 600px;
+                margin: auto;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            tr,td{
+                height: 50px;
+                color: blue;
+                text-align: center;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">线上学习作业二practice4:数组翻转</h1>
+        <table>
+            <tr>
+                <td>学院：</td>
+                <td>软件学院</td>
+            </tr>
+            <tr>
+                <td>姓名：</td>
+                <td>闫文博</td>
+            </tr>
+            <tr>
+                <td>学号</td>
+                <td>201451082337</td>
+            </tr>
+            <tr>
+                <td>学号对应翻转前的数组：</td>
+                <td id="arr1"></td>
+            </tr>
+            <tr>
+                <td>学号对应翻转前的数组：</td>
+                <td id="arr2"></td>
+            </tr>
+        </table>
+        <script>
+            function reverse(arr) {
+                var start = 0;
+                var end = arr.length-1;
+                while(start < end) {
+                    var temp = arr[start];
+                    arr[start] = arr[end];
+                    arr[end] = temp;
+                    start++;
+                }
+                return arr;
+            }
+            document.getElementById("arr1").innerHTML = [20,14,51,8,23,37];
+            document.getElementById("arr2").innerHTML = reverse([20,14,51,8,23,37]);
+        </script>
+    </body>
+</html>

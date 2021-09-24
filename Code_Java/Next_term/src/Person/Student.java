@@ -42,9 +42,13 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return "学号："+number+"\t姓名："+getName()+"\t性别："+getSex()+"\t生日："
+        return "学号："+String.format("%03d",number)+"\t姓名："+getName()+"\t性别："+getSex()+"\t生日："
                 +String.format("%tY年%<tm月%<td日",getBirthday())+"\t语文："+chinese+
                 "\t数学："+math+"\t平均分:"+(chinese+math)/2;
+    }
+
+    public int average(){
+        return (chinese+math)/2;
     }
 
     public static void main(String[] args) {

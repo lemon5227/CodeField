@@ -3,26 +3,30 @@ package Siington;
 import com.sun.org.apache.xpath.internal.operations.Or;
 
 /**
- * ÀÁººÊ½ÊµÏÖ
+ * æ‡’æ±‰å¼å®ç°
  */
 public class SingtonTest2 {
+    public static void main(String[] args) {
+        Order o1 = Order.getInstance();
+
+    }
 }
 
 class Order{
     /**
-     * Ë½ÓĞ»¯¹¹ÔìÆ÷
+     * ç§æœ‰åŒ–æ„é€ å™¨
      */
     private Order(){
 
     }
 
     /**
-     * ÉùÃ÷µ±Ç°Àà¶ÔÏó£¬Ã»ÓĞ³õÊ¼»¯
+     * å£°æ˜å½“å‰ç±»å¯¹è±¡ï¼Œæ²¡æœ‰åˆå§‹åŒ–
      */
     private static Order instance = null;
 
     /**
-     * ÉùÃ÷public static µÄ·µ»Øµ±Ç°¶ÔÏóÀàµÄ·½·¨
+     * å£°æ˜public static çš„è¿”å›å½“å‰å¯¹è±¡ç±»çš„æ–¹æ³•
      */
 
     public static Order getInstance(){

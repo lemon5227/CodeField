@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div id='div1'></div>
+        <script>
+            var div1 = document.getElementById('div1');
+            
+            for(var i=10;i>=0;i--){
+                var para = document.createElement('p');
+                if(i==10){
+                    para.textContent = "Countdown 10";
+                }else if(i==0){
+                    para.textContent = "Blast off！";
+                }else{
+                    para.textContent = i;
+                }
+                div1.appendChild(para);
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table td{
+            border: 1px solid;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="table"></div>
+    <script>
+        var str = "<table>";
+        var div = document.getElementById("table");
+        for (var i = 1; i < 10; i++) {
+            str += '<tr>';
+            for (var j = 1; j <= i; j++) {
+                str +='<td>'+j+'*'+i+'='+j*i+'</td>';
+            }
+            str+='</tr>';
+        }
+        str+='</table>';
+        div.innerHTML = str;
+    </script>
+</body>
+
+</html>

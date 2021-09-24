@@ -1,0 +1,3 @@
+In Python you can copy
+In Python you can paste 
+In Python you can compute

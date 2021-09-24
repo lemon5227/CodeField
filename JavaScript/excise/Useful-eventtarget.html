@@ -1,0 +1,40 @@
+<!--事件对象 e 的target属性始终是事件刚刚发生的元素的引用-->
+<!DOCTYPE html>
+<html>
+<style>
+    div {
+        background-color: red;
+        height: 100px;
+        width: 25%;
+        float: left;
+    }
+</style>
+
+<body>
+
+</body>
+<script>
+    for (let i = 0; i < 16; i++) {
+        const myDiv = document.createElement('div');
+        document.body.appendChild(myDiv);
+    }
+
+    function random(number) {
+        return Math.floor(Math.random() * number);
+    }
+
+    function bgChange() {
+        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        return rndCol;
+    }
+
+    const divs = document.querySelectorAll('div');
+
+    for(let i = 0; i < divs.length; i++) {
+        divs[i].onclick=function(e) {
+            e.target.style.backgroundColor = bgChange();
+        }
+    }
+</script>
+
+</html>
