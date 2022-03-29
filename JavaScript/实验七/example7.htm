@@ -1,0 +1,67 @@
+<!--闫文博201451082337-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>dom操作练习</title>
+    <style>
+        table{
+            width: 500px;
+            margin:30px auto;
+            border:1px solid #ddd;
+            border-collapse:collapse;
+        }
+        th,td{
+            height: 50px;
+            text-align:center;
+            border:1px solid #ddd;
+        }
+        input[type=text]{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>dom练习</caption>
+        <thead>
+            <tr>
+                <th width="300">姓名</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text"></td>
+                <td>
+                    <input type="button" value="确定" onclick="ok();">
+                    <input type="button" value="修改" onclick="modify();">
+                    <input type="button" value="删除" onclick="deltr(this);">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var node = document.querySelectorAll("input");
+        
+        function ok() {
+
+            
+            node[0].disabled = true;
+           
+        }
+
+        function modify() {
+            
+            node[0].disabled = false;
+
+        }
+        function deltr() {
+            var tr = document.querySelectorAll("tr");
+            console.log(tr[1]);
+            tr[1].parentElement.removeChild(tr[1]);
+
+        }
+    </script>
+</body>
+</html>

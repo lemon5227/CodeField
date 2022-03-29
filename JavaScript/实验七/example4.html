@@ -1,0 +1,61 @@
+<!--闫文博201451082337-->
+<!doctype html>
+<html>
+<head>
+<meta charset = "utf-8">
+  <title>全选效果</title>
+  <style type = "text/css">
+    td{ text-align:center;
+      font-size:13px;
+      line-height:25px;
+    }
+  </style>
+</head>
+<body>
+  <table border = "1" cellspacing = "0" cellpadding = "0"  width = "300px;" >
+    <tr>
+      <td><input  id = "all"  type = "checkbox"  value =  "全选"  onclick = "check();" />全选/全不选</td>
+      <td>商品名称</td><td>价格</td>
+    </tr>
+    <tr>
+       <td><input name = "product" type = "checkbox" value = "1" onclick = "allno();"/></td>
+       <td>网页设计</td>	
+       <td>28</td>
+    </tr>
+    <tr>
+       <td><input name = "product" type="checkbox" value = "2" onclick = "allno();"  /></td>
+       <td>css + div布局</td>	
+       <td>28</td>
+    </tr>
+    <tr>
+       <td><input name = "product" type = "checkbox" value = "1" onclick = "allno();"/></td>
+       <td>JavaScript程序设计</td>	
+       <td>28</td>
+    </tr>
+  </table>
+</body>
+<script type = "text/JavaScript"> 
+function copyImg() {
+            var child = document.querySelector("input[value=复制图片]");
+            var obj = document.querySelector("img");
+            // 克隆节点
+            var copyImg = obj.cloneNode(true);
+            document.body.appendChild(copyImg);
+        }
+
+        function changeImg() {
+            objImg = document.querySelectorAll("img");
+            // 遍历产生的所有图片
+            for (let index = 0; index < objImg.length; index++) {
+                // const element = array[index];
+                // 创建新的元素节点
+                var newImg = document.createElement("img");
+                // 插入节点   
+                newImg.src = "images/tp2.jpg";
+                // 替换函数
+                document.body.replaceChild(newImg, objImg[index]);
+
+            }
+        }
+</script>
+</html>

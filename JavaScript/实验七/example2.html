@@ -1,0 +1,93 @@
+<!--闫文博201451082337-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图效果演示</title>
+</head>
+<style>
+  .wrapper{
+    width:520px;
+    height:280px;
+    margin:10px auto;
+    border:1px solid red;
+    position:relative;    
+    /*父元素使用相对定位的目的：（1）保持父元素不动；（2）绝对定位的子元素偏移量是相对父元素*/
+    }
+  .links{
+    position:absolute;
+    right:20px;
+    bottom:5px;
+    }
+  .links a{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    line-height:20px;   /*文字垂直居中*/
+    font-size:14px;
+    text-align:center;  /*文字水平居中*/
+    text-decoration:none;     
+    }
+  .a1{      /*没有选中的样式*/
+    color:#FFF;
+    background-color:red;
+    }
+  .a2{      /*选中的样式*/
+    color:#000;
+    background-color:yellow;
+    }
+</style>
+<script>
+  var NowImg = 2;
+        var MaxImg = 4;
+        var timer; 
+        function show() {
+            console.log(arguments.length);
+            if (arguments.length > 0) 
+            {
+                NowImg = arguments[0];
+                console.log(NowImg);
+                window.clearInterval(timer);
+
+            }
+            for (var index = 1; index <= MaxImg; index++) {
+                if (index == NowImg) {
+                    document.getElementById("img" + index).style.display = "block";
+                    document.getElementById("btn" + index).className = "a2";
+                } else {
+
+                    document.getElementById("img" + index).style.display = "none";
+                    document.getElementById("btn" + index).className = "a1";
+                }
+
+            }
+            if (NowImg == MaxImg) {
+                NowImg = 1;
+            } else {
+                NowImg++;
+            }
+
+        }
+        timer = setInterval('show()', 1500);
+</script>
+</head>
+<body>
+<!-- 网页开发中，书写css常用class选择器 -->  
+<div class="wrapper" onload="show()">
+
+    <div class="container">
+        <img src="images/ad-01.jpg" id="img1">
+        <img src="images/ad-02.jpg" id="img2" style="display:none">
+        <img src="images/ad-03.jpg" id="img3" style="display:none">
+        <img src="images/ad-04.jpg" id="img4" style="display:none">
+    </div>
+    <div class="links">
+        <a href="javascript:" class="a2" id="btn1" onmouseover="show(1)">1</a>
+        <a href="javascript:" class="a1" id="btn2" onmouseover="show(2)">2</a>
+        <a href="javascript:" class="a1" id="btn3" onmouseover="show(3)">3</a>
+        <a href="javascript:" class="a1" id="btn4" onmouseover="show(4)">4</a>
+    </div>
+
+</div>
+</body>
+</html>

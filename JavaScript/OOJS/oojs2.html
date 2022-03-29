@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var person1 = new Object();
+            person1.name ='Chris';
+            person1['age'] = 38;
+            person1.greeting = function(){
+                alert('Hi! I\'m '+this.name+'.'); 
+            }
+            var person2 = Object.create(person1);
+            person2.name ='Jhon';
+            person2.greeting();
+        </script>
+    </body>
+</html>

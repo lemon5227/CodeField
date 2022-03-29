@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用构造函数创建对象并遍历</title>
+</head>
+
+<body>
+    <h1>利用构造函数创建对象并遍历</h1>
+    <script>
+        function createStudent(name,id,sex){
+            name 
+            this.fu = function(){
+                alert(this.name+this.is);
+            }
+
+        }
+        var student = new createStudent();
+        Object.keys(student).forEach(function (key) {
+            document.write("属性"+key+"其对应的值:"+student[key]+"<br>");
+        });
+    </script>
+</body>
+
+</html>

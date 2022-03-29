@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../vue.js"></script>
+</head>
+<body>
+    <div id = "root">
+        <!-- 使用v-show做条件渲染 -->
+        <h2 v-show="a">尚硅谷</h2>    
+    </div>
+    <script type="text/javascript">
+        new Vue({ 
+            el:"#root",
+            data: {
+                a:false,
+            }
+        });
+    </script>
+</body>
+</html>

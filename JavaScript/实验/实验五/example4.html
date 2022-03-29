@@ -1,0 +1,40 @@
+<!-- 201451082337 闫文博-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>制作年历</title>
+	<style>
+  body{display: flex;flex-wrap: wrap;}
+  table{width: 420px;margin:15px 10px;}
+	th{background-color: #0000ff;height: 30px;}
+  td{background-color: pink;height: 20px;text-align:center;}
+	</style>
+	<script>
+		var year=prompt("请输入年份：","2021");
+		document.write(calendar(year));
+		function calendar(y){
+    	var str="";
+    		for(var m=1;m<=12;m++){
+    			str+="<table>"
+    			str+="<tr><th colspan='7'>"+y+"年"+m+"月</th></tr>";
+    			str+="<tr><td>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td></tr>"
+    			var max=new Date(y,m,0).getDate();//获取每个月份有多少天
+                var w=new Date(y,m-1).getDay(); //获取每月1号的星期值
+    			str+="<tr>";
+    			for(var d=1;d<=max;d++) {  //遍历该月份
+                   if(w&&d==1){   //该月的第一天不是星期天，则填充空格
+                   	str+="<td colspan="+w+"></td>";
+                   }
+                   str+="<td>"+d+"</td>";
+                   if(w==6&&d!=max)  str+="</tr><tr>";  //如果是周六但不是该月最后一天，则换行
+                   else if(d==max)   str+="</tr>"    //该月最后一天
+    				       w=(w+1>6)?0:w+1;     //控制星期的值在0-6之间
+    		     }
+    			str+="</table>";
+    		}
+    		return str;
+		}
+	</script>
+</head>
+<body></body></html>

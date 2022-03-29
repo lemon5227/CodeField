@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+    <script type="text/javascript" src="../vue.js"></script>
+    <script type="text/javascript" src="../day.js"></script>
+</head>
+<body>
+    <div id = "root">
+        <h2>显示格式化后的时间</h2>
+        <!--计算属性实现-->
+        <h3>现在是：{{fmtTime}}</h3>
+        <!--methods实现-->
+        <h3>现在是：{{getFmtTime()}}</h3>
+        <!--过滤器实现-->
+        <h3>现在是：{{time | timeFormat | anotherSlice}}</h3>
+    </div>
+</body>
+    <script type="text/javascript">
+        Vue.filter('anotherSlice', function(value){
+            return value.slice(0,4)
+        })
+        var vm = new Vue({
+            el:"#root",
+            data: {
+                time:Date.now(),
+
+            },
+            computed:{
+                fmtTime(){
+                    return dayjs(this.time).format('YYYY年MM月DD日 HH:mm:ss')
+                }
+            },
+            methods: {
+                getFmtTime(){
+                    return dayjs(this.time).format('YYYY年MM月DD日 HH:mm:ss')
+                }
+            },
+            //局部过滤器
+            filters:{
+                timeFormat(value){
+                    console.log('@',value);
+                    return dayjs(value).format('YYYY年MM月DD日 HH:mm:ss');
+                },
+                mySlice(value){
+                    return value.slice(0,4)
+                }
+            }
+        });
+    </script>
+</html>

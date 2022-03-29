@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微博发布</title>
+    <script src="jquery-3.6.0.js"></script>
+</head>
+<style>
+    .box {
+        width: 600px;
+        margin: 20px auto;
+        border: 1px solid #000;
+        padding: 10px;
+    }
+
+    #txt {
+        width: 400px;
+        height: 150px;
+    }
+
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0 126px 0 65px;
+    }
+
+    li {
+        border-bottom: 1px dashed #ccc;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            var str = $("#txt").val();
+            $("#txt").val("");
+            console.log(str);
+            var arr = str.split("\n");
+            for(var i=arr.length-1; i>=0; i--){
+                $("#ul").append("<li>"+arr[i]+"</li>");
+            }
+
+        })
+    })
+</script>
+<body>
+    <h1 align="center">软工2023班闫文博</h1>
+    <div class="box" id="weibo">
+        <span>微博发布</span>
+        <button id="btn">发布</button>
+        <textarea name="" id="txt" cols="30" rows="10"></textarea>
+        <ul id="ul"> </ul>
+    </div>
+</body>
+</html>

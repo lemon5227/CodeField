@@ -1,0 +1,20 @@
+<!-- 201451082337 闫文博-->
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="time">12</h1>
+        <script>
+            var week = ["星期一","星期二","星期三","星期四","星期五","星期六","星期日"];
+            var now = new Date(Date.UTC(2020,10,18,15,49,17));
+            var Myset = setInterval(function(){
+                var time = document.getElementById("time");
+                var str = "今天是："+now.getFullYear()+"年"+now.getMonth()+"月"+now.getDate()+"日"+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds()+week[now.getDay()];
+                document.getElementById("time").innerHTML = str;
+                console.log("今天是："+now.getFullYear()+"年"+now.getMonth()+"月"+now.getDate()+"日"+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds()+week[now.getDay()]);
+                var now_s= now.getTime();
+                now.setTime(now_s+1000);
+            },1000);
+            
+        </script>
+    </body>
+</html>

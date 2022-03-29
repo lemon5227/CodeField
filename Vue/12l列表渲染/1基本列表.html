@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../vue.js"></script>
+</head>
+<body>
+    <div id = "root">
+        <ul>
+            <li v-for="(p,index) of persons" :key="index">{{p.name}}-{{p.age}}-{{index}}</li>
+        </ul> 
+        <hr/>
+        <h2>汽车信息</h2>
+        <ul>
+            <li v-for="(value,k) in cars" :key="index">{{k}}-{{value}}</li>
+        </ul> 
+        <h2>测试遍历字符串</h2>
+        <ul>
+            <li v-for="(char,index) in str" :key="index">{{char}}</li>
+        </ul>
+        <h2>测试遍历指定次数</h2>
+        <ul>
+            <li v-for="(char,index) in 5" :key="index">{{char}}</li>
+        </ul>
+    <script type="text/javascript">
+        new Vue({ 
+            el:"#root",
+            data: {
+                persons:[
+                    {id:"001",name:"张三",age:18},
+                    {id:"002",name:"李四",age:19},
+                    {id:"003",name:"王五",age:17},
+                ],
+                cars:{
+                    name:"奥迪A8",
+                    price:"70万",
+                    content:'黑色',
+                },
+                str:"hello",
+            }
+        });
+    </script>
+</body>
+</html>

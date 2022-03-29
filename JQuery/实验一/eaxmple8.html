@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{padding:0px; margin:0px;}
+        .SubCategoryBox{ width:600px; margin:20px auto; font-size:12px;}
+        .SubCategoryBox ul{ list-style:none;}
+        .SubCategoryBox ul li{float:left; width:200px; text-align:center;height:24px; line-height:24px;}
+        .showmore { clear:both; text-align:center; padding-top:10px;}
+        a {color:#04D; text-decoration:none;}
+        a:hover { color:#F50; text-decoration:underline;}
+        .showmore a { display:block; width:120px; margin:0 auto; line-height:24px; border:1px solid #AAA;}
+        .promoted a{ color:#f50;}
+        </style>
+    <script src="jquery-3.6.0.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("ul li").filter(":contains('佳能'),:contains('尼康'),:contains('奥林巴斯')").addClass("promoted")
+
+            /* $(".SubCategoryBox>ul>li:eq(0)").addClass("promoted")
+            $(".SubCategoryBox>ul>li:eq(2)").addClass("promoted")
+            $(".SubCategoryBox>ul>li:eq(10)").addClass("promoted") */
+            $(".showmore").click(function(){
+                var name  = $(this).text().trim();
+                console.log(name)
+                if(name == "精简显示品牌"){
+                    $(this).children().text("显示所有品牌")
+                    $(".SubCategoryBox>ul>li:eq(0)").removeClass("promoted")
+                    $(".SubCategoryBox>ul>li:eq(2)").removeClass("promoted")
+                    $(".SubCategoryBox>ul>li:eq(10)").removeClass("promoted")
+                    $(".SubCategoryBox>ul>li:gt(5)").hide()
+                    $(".SubCategoryBox>ul>li:last").show()
+                }
+
+                if(name == "显示所有品牌"){
+                    $(this).children().text("精简显示品牌")
+                    $(".SubCategoryBox>ul>li:eq(0)").addClass("promoted")
+                    $(".SubCategoryBox>ul>li:eq(2)").addClass("promoted")
+                    $(".SubCategoryBox>ul>li:eq(10)").addClass("promoted")
+                    $(".SubCategoryBox>ul>li:gt(5)").show()
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1 align="center">软工2023班闫文博</h1>
+    <div class="SubCategoryBox">
+        <ul>
+            <li><a href="#">佳能</a><i>(30440)</i></li>
+            <li><a href="#">索尼</a><i>(27220)</i></li>
+            <li><a href="#">三星</a><i>(20808)</i></li>
+            <li><a href="#">尼康</a><i>(17821)</i></li>
+            <li><a href="#">松下</a><i>(12289)</i></li>
+            <li><a href="#">卡西欧</a><i>(8242)</i></li>
+            <li><a href="#">富士</a><i>(14894)</i></li>
+            <li><a href="#">柯达</a><i>(9520)</i></li>
+            <li><a href="#">宾得</a><i>(2195)</i></li>
+            <li><a href="#">理光</a><i>(4114)</i></li>
+            <li><a href="#">奥林巴斯</a><i>(12205)</i></li>
+            <li><a href="#">明基</a><i>(1466)</i></li>
+            <li><a href="#">爱国者</a><i>(3091)</i></li>
+            <li><a href="#">其它品牌相机</a><i>(7275)</i></li>
+        </ul>
+        <div class="showmore">
+            <a href="#"><span>精简显示品牌</span></a>
+        </div>
+    </div>
+</body>
+</html>

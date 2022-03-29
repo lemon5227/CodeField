@@ -1,0 +1,45 @@
+<!-- 201451082337 闫文博-->
+<!doctype html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title> 弹出下拉列表 </title>
+  <style>
+    fieldset {
+    padding:20px; width:200px;
+    margin:0 auto;
+    }
+    #fromStation {
+    width:100px;
+    }
+    #stationList {
+    margin-left:72px; width:107px; display:none;
+    }
+  </style>
+<script>
+     var input = document.getElementById('fromStation');
+     var select = document.getElementById('stationList');
+     function showSelect(){
+      document.getElementById('stationList').style.display="block";
+     }
+     function setText(x1,x2){
+      document.getElementById('fromStation').value=x1.value;
+      document.getElementById('stationList').style.display="none";
+     }
+</script>
+</head>
+<body>
+<form id="f1" name="f1" action="" method="">
+     <fieldset>
+        <legend>余票查询</legend>
+        *出发站:<input id="fromStation" placeholder="简码或汉字" onclick="showSelect()"  /><br />
+        <select id="stationList"  size="5" onclick ="setText(this,'fromStation')">
+              <option value="北京"> 北京 </option>
+              <option value="上海"> 上海 </option>
+              <option value="天津"> 天津 </option>
+              <option value="重庆"> 重庆 </option>           
+        </select>
+     </fieldset>
+  </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "editor.insertSpaces": true,
+    "files.autoGuessEncoding": true,
+    "arduino.logLevel": "info",
+    "explorer.confirmDelete": false,
+    "editor.detectIndentation": false,
+    "files.encoding": "utf8",
+    "arduino.path":"C:\\Program Files (x86)\\Arduino",
+    "arduino.defaultBaudRate": 9600,
+    "arduino.disableIntelliSenseAutoGen": true,//禁止自动生产c_cpp_properties.json
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM对象与jQuery对象的区别</title>
+<script src="jquery-3.6.0.js"></script>
+<script>
+   $(document).ready(function(){   //jQuery入口函数
+               $('#cr').click(function(){
+                   if(this.checked){
+                       alert('谢谢你的参与')
+                   }
+               })
+        }) 
+</script>
+</head>
+<body>
+<input type="checkbox" id="cr"><label for="cr">软工2023班闫文博已经阅读了上面的制度</label>
+</body>
+</html>

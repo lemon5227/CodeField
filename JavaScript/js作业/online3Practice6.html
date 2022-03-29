@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串方法的应用</title>
+    <style>
+        table {
+            width: 800px;
+            margin: 10px auto;
+            border: 2px solid #000;
+            border-collapse: collapse;
+        }
+        
+        td {
+            border: 1px solid rgb(25, 26, 27);
+            /* width: 300px; */
+            height: 40px;
+            text-align: center;
+            line-height: 30px;
+            color: rgb(101, 13, 243);
+        }
+        
+        .arr {
+            width: 300px;
+        }
+        
+        .btn {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h3>统计姓名拼音字符串中出现最多的字符</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3>“闫文博”同学姓名对应的字符串是："yanwenbo"</h3>
+            </td>
+        </tr>
+        <tr>
+            <td id="staArr" class="arr"></td>
+            <td class="btn" rowspan="2"><input type="button" value="统计" onclick="staArr1()"></td>
+        </tr>
+        <tr>
+            <td id="num2Arr" class="arr"></td>
+        </tr>
+
+    </table>
+    <script>
+        var staArr = document.getElementById("staArr");
+        var num2Arr = document.getElementById("num2Arr");
+        var str = ['y','a','n','w','e','n','b','o'];
+        var o ={};
+        all = '';
+        function staArr1(){
+            
+            for(var i=0;i<str.length;i++){
+                o[str[i]] = (o[str[i]]+1) || 1;
+            }
+
+            for(var index in o){
+                all += index + ':' + o[index];
+            }
+
+            var max =0;
+            for(var index in o){
+                if(max < o[index]){
+                    max = o[index];
+                }
+            }
+            staArr.innerHTML =all;
+            num2Arr.innerHTML = max;
+        }
+    </script>
+</body>
+
+</html>

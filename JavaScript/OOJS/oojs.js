@@ -20,3 +20,15 @@ var myDataName = 'height'
 var myDataValue = '1.75m'
 person[myDataName] = myDataValue
 person;
+function createNewPerson(name) {
+    var obj = {};
+    obj.name = name;
+    obj.greeting = function () {
+      alert('Hi! I\'m ' + this.name + '.');
+    }
+    return obj;
+  }
+
+  var salva = createNewPerson('salva');
+  console.log(salva.name);
+  salva.greeting();

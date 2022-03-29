@@ -1,0 +1,6 @@
+If you read this. Congratulations! 
+You have successfully uploaded data file
+to ESP8266 NodeMCU's Flash File System!
+
+Author: CYNO (Taichi-Maker Team)
+Date: 2020-02-06

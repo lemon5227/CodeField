@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Compare/Compare.iml" filepath="$PROJECT_DIR$/Compare/Compare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GUI/GUI.iml" filepath="$PROJECT_DIR$/GUI/GUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IO流/IO流.iml" filepath="$PROJECT_DIR$/IO流/IO流.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC/JDBC.iml" filepath="$PROJECT_DIR$/JDBC/JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lambda/Lambda.iml" filepath="$PROJECT_DIR$/Lambda/Lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GUI/Layout.iml" filepath="$PROJECT_DIR$/GUI/Layout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NIO/NIO.iml" filepath="$PROJECT_DIR$/NIO/NIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringDemo/StringDemo.iml" filepath="$PROJECT_DIR$/StringDemo/StringDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cf.lemon5527.Team/cf.lemon5527.Team.iml" filepath="$PROJECT_DIR$/cf.lemon5527.Team/cf.lemon5527.Team.iml" />
       <module fileurl="file://$PROJECT_DIR$/shangguigu.iml" filepath="$PROJECT_DIR$/shangguigu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/动态代理/动态代理.iml" filepath="$PROJECT_DIR$/动态代理/动态代理.iml" />
+      <module fileurl="file://$PROJECT_DIR$/反射/反射.iml" filepath="$PROJECT_DIR$/反射/反射.iml" />
+      <module fileurl="file://$PROJECT_DIR$/枚举类/枚举类和注解.iml" filepath="$PROJECT_DIR$/枚举类/枚举类和注解.iml" />
+      <module fileurl="file://$PROJECT_DIR$/泛型/泛型.iml" filepath="$PROJECT_DIR$/泛型/泛型.iml" />
+      <module fileurl="file://$PROJECT_DIR$/网络编程/网络编程.iml" filepath="$PROJECT_DIR$/网络编程/网络编程.iml" />
+      <module fileurl="file://$PROJECT_DIR$/集合框架/集合框架.iml" filepath="$PROJECT_DIR$/集合框架/集合框架.iml" />
     </modules>
   </component>
 </project>

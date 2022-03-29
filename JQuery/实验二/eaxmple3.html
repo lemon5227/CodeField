@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("ul>li:contains('菠萝')").append("<li>哈密瓜</li>")
+            var clone = $("ul>li:contains('苹果')").clone();
+            var clone2 = $("ul>li:contains('橘子')").clone();
+
+            $("ul>li:contains('雪梨')").append(clone);
+            $("ul>li:contains('雪梨')").append(clone2);
+        })
+    </script>
+</head>
+<body>
+    <h1 align="center">软工2023班闫文博</h1>
+  <p title="选择你最喜欢的水果">你最喜欢的水果是？</p>
+    <ul>
+        <li>苹果</li>
+        <li>橘子</li>
+        <li>菠萝</li>
+        <li>雪梨</li>
+    </ul>
+</body>
+</html>

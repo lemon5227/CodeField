@@ -1,0 +1,28 @@
+<!-- 201451082337 闫文博-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script>
+    function start(){
+        var mySet=setInterval(function(){
+            var word = document.getElementById("scrollText").innerHTML;
+        var line = word.split("");
+        var a=line.shift();
+        line.push(a);
+        document.getElementById("scrollText").innerHTML = line.join("");
+        console.log(word);
+        },100);
+    }
+    function pause(){
+        clearInterval(mySet);
+    }
+</script>
+</head>
+<body>
+	<h1 id="scrollText" style="width:850px;text-align:center;border:1px solid #000000;"> 欢迎闫文博在河南科技大学软件学院学习！</h1>
+	<input type="button" value="开始"  onclick="start();">
+	<input type="button" value="暂停"  onclick="pause();">
+</body>
+</html>

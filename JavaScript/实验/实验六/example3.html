@@ -1,0 +1,26 @@
+<!--闫文博201451082337-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<title>自动弹出和关闭窗口！</title>
+<script language="javascript">
+function popwindow(){
+    a=window.open('https://www.haust.edu.cn/',"河科大",'height=400,width=300,top=150,left=100');
+}
+
+setTimeout(popwindow,1000);
+
+setTimeout(function(){
+    if(a.closed){
+        alert("创建的窗口已关闭");
+    }else{
+        a.close();
+    }
+},5000); 
+</script>
+</head>
+<body>
+    
+</body>
+</html>

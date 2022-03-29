@@ -1,0 +1,54 @@
+<!-- 201451082337 闫文博-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>猴子选大王</title>
+    <style>
+        form {
+            width: 400px;
+            margin: 10px auto;
+        }
+
+        div#result {
+            width: 400px;
+            margin: 10px auto;
+        }
+    </style>
+    <script>
+        function ok() {
+            var array = [];
+            var number = document.getElementById("count").value;
+            var king = document.getElementById("pos").value;
+            for (var i = 0; i <number;i++) {
+                array[i] = i+1;
+            }
+            var j = 0;
+            while(array.length != 1) {
+                for (var k=0;k<king-1;k++) {
+                    j++;
+                    j = j%array.length;
+                }
+                array.splice(j, 1);
+
+            }
+            var str = "猴王编号为："+array[0];
+            document.getElementById("result").innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>猴子选大王游戏</legend>
+            <label for="">猴子的总数量：</label><input type="text" id="count"><br>
+            <label for="">踢出的猴子的报数号：</label><input type="text" id="pos"><br>
+            <input type="button" value="产生猴王" onclick="ok()">
+        </fieldset>
+    </form>
+    <div id="result"></div>
+</body>
+
+</html>

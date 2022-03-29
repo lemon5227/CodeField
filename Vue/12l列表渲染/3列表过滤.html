@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../vue.js"></script>
+</head>
+<body>
+    <div id = "root">
+        <h2>人员列表</h2>
+        <input type="text" placeholder="请输入名字" v-model="keyword" >
+        <ul>
+            <li v-for="p of fillpersons" :key="p.id">{{p.name}}-{{p.age}}-{{p.sex}} <input type="text"></li>
+        </ul> 
+        <hr/>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({ 
+            el:"#root",
+            data: {
+                keyword:"",
+                persons:[
+                    {id:"001",name:"马冬梅",age:18,sex:"女"},
+                    {id:"002",name:"周冬雨",age:19,sex:"女"},
+                    {id:"003",name:"周杰伦",age:17,sex:"女"},
+                    {id:"004",name:"温兆伦",age:30,sex:"女"},
+                ],
+                fillpersons:[],
+                
+            },
+            watch: {
+                keyword:{
+                    immediate: true,
+                    handler(newValue){
+                        this.fillpersons = this.persons.filter((p) => {
+                            return p.name.indexOf(newValue) != -1;
+                        }) 
+                    }
+                    
+                }
+            },
+        });
+    </script>
+</body>
+</html>

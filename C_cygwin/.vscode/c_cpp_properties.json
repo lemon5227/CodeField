@@ -1,0 +1,28 @@
+{
+    
+    "configurations": [
+        {
+    
+            "name": "Windows-cygwin-gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceRoot}",
+                "D:\\cygwin64\\bin",
+                "D:\\cygwin64\\usr\\i686-w64-mingw32\\sys-root\\mingw\\bin",
+                "D:\\cygwin64\\usr\\i686-w64-mingw32\\sys-root\\mingw\\include",
+                "D:\\cygwin64\\usr\\i686-w64-mingw32\\sys-root\\mingw\\include",
+                "D:\\cygwin64\\lib\\gcc\\i686-w64-mingw32\\11\\include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "D:\\cygwin64\\bin\\gcc.exe",
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-x64",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
+}

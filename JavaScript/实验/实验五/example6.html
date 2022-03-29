@@ -1,0 +1,31 @@
+<!-- 201451082337 闫文博-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>霓虹字效果</title>
+    <script>
+        var s = "河南科技大学软件学院";
+        var cr = new Array("red", "orange", "yellow", "green", "blue", "pink");
+        var pos = 0;
+        function f() {
+            var str = "";
+            while (s.length % cr.length == 0)
+                cr[cr.length] = cr[Math.floor(Math.random() * cr.length)];
+            for (var i = 0; i < s.length; i++) {
+                str += s.substring(i, i + 1).fontcolor(cr[pos]);
+                pos++;
+                if (pos == cr.length) pos = 0;
+            }
+            document.getElementById("d1").innerHTML = str;
+            window.setTimeout('f()', 1000)
+        }
+    </script>
+</head>
+
+<body onload="f()">
+    <h1 align="center" style="font-size:50px;" id="d1"></h1>
+</body>
+
+</html>

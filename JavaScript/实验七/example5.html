@@ -1,0 +1,47 @@
+<!--闫文博201451082337-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width: 200px;
+        height: 134px;
+    }
+</style>
+
+<body>
+
+    <input type="button" value="复制图片" onclick="copyImg()">&nbsp;&nbsp;
+    <input type="button" value="更改图片" onclick="changeImg()"><br />
+    <img src="images/tp1.jpg">
+    <script>
+        function copyImg() {
+            var child = document.querySelector("input[value=复制图片]");
+            var obj = document.querySelector("img");
+            
+            var copyImg = obj.cloneNode(true);
+            document.body.appendChild(copyImg);
+        }
+
+        function changeImg() {
+            objImg = document.querySelectorAll("img");
+           
+            for (let index = 0; index < objImg.length; index++) {
+               
+                var newImg = document.createElement("img");
+                  
+                newImg.src = "images/tp2.jpg";
+                document.body.replaceChild(newImg, objImg[index]);
+
+            }
+        }
+    </script>
+</body>
+
+</html>

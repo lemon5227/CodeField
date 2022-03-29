@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/实验三/实验三.iml" filepath="$PROJECT_DIR$/实验三/实验三.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验二/实验二.iml" filepath="$PROJECT_DIR$/实验二/实验二.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/实验二、实验三.iml" filepath="$PROJECT_DIR$/.idea/实验二、实验三.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script src="jquery-3.6.0.js"></script>
+<script>
+$(function(){
+    alert($("div").eq(2).index());
+})
+</script>
+</head>
+<body>
+    <h1>这是标题1</h1>
+
+    <h2>这是标题2</h2>
+    
+    <div class="one" id="one">
+    
+        id为one，class为one的div
+    
+       <div class="mini">class为mini</div>
+    
+    </div>
+    
+    <div class="one" id="two" title="test">
+    
+        id为two，class为one,title为test的div
+    
+       <div class="mini" title="other">class为mini，title为other</div>
+    
+       <div class="mini" title="test">class为mini，title为test</div>
+    
+    </div>
+    
+    <div class="one" >
+    
+       <div class="mini">class为mini</div>
+    
+       <div class="mini">class为mini</div>
+    
+       <div class="mini">class为mini</div>
+    
+       <div class="mini"></div>
+    
+    </div>
+</body>
+</html>

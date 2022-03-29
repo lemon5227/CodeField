@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期对象练习</title>
+    <style>
+        table {
+            width: 600px;
+            margin: 10px auto;
+            border: 2px solid #000;
+            border-collapse: collapse;
+        }
+        
+        td {
+            border: 1px solid rgb(25, 26, 27);
+            /* width: 300px; */
+            height: 40px;
+            text-align: center;
+            line-height: 30px;
+            color: rgb(101, 13, 243);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>姓名:</td>
+            <td>软工2020级23班闫文博</td>
+        </tr>
+        <tr>
+            <td>出身年份：</td>
+            <td id='birYear'></td>
+        </tr>
+        <tr>
+            <td>出生月份：</td>
+            <td id='birMonth'></td>
+        </tr>
+        <tr>
+            <td>出生日：</td>
+            <td id='birData'></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="显示出生日期" onclick="birth()"></td>
+
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h1>生日倒计时</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1 id="down"></h1>
+            </td>
+        </tr>
+        <td colspan="2"><input type="button" value="计算生日倒计时" onclick="birDown()"></td>
+        </tr>
+    </table>
+    <script>
+        var year = document.getElementById('birYear');
+        var month = document.getElementById('birMonth');
+        var day = document.getElementById('birData');
+        function birth(){
+           year.innerText = 2000;
+           month.innerText = 9;
+           day.innerText =26;
+        }
+        var now = new Date();
+        var birthday = new Date(now.getFullYear(), 8, 26);
+        var down = document.getElementById('down');
+        function birDown(){
+            if(now > birthday){
+                birthday.setFullYear(2022);
+                var c = birthday.getTime()-now.getTime();
+                var day = parseInt(c / (1000*60*60*24));
+                down.innerHTML = day+" 天";
+            }else{
+                var c = birthday.getTime()-now.getTime();
+                var day = parseInt(c / (1000*60*60*24));
+                down.innerHTML = day+" 天";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

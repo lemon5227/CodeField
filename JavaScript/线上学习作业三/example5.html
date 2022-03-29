@@ -1,0 +1,46 @@
+<!--201451082337闫文博-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加背景色和设置文字颜色</title>
+</head>
+<body>
+    <form id="form1" name="form1" method="post" action="">
+        <p align="center">选择你喜欢的文字样式:
+          <input type="radio" name="oColors" id="radio1"  onclick="setColor();" />
+          红背景，黄色文字
+          <input type="radio" name="oColors" id="radio2" onclick="setColor();" />
+          绿背景，灰色文字
+          <input type="radio" name="oColors" id="radio3" onclick="setColor();" />
+          蓝背景，白色文字
+        </p>
+      </form>
+      <h1 id="heading" align="center">我的名字叫闫文博，我是软工2023班</h1>
+      <script>
+        function setColor(){
+            var choice = document.getElementById('form1');
+            var heading = document.getElementById('heading');
+            for(var i=0; i<choice.length; i++){
+                if(choice[i].checked){
+                    if(i == 0){
+                        heading.style.backgroundColor = "red";
+                        heading.style.color = "yellow";
+                    }
+                    if(i == 1){
+                        heading.style.backgroundColor = "green";
+                        heading.style.color = "gray";
+                    }
+                    if(i == 2){
+                        heading.style.backgroundColor = "blue";
+                        heading.style.color = "write";
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

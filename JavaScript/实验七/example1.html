@@ -1,0 +1,48 @@
+<!--闫文博201451082337-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>screen对象属性的使用</title>
+<style>
+#d1
+{
+	width:500px;
+	height:100px;
+	position:absolute;
+	display:none;
+	border:1px #06C solid;
+	padding:10px;
+	margin:auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+</style>
+<script>
+	function a(){
+        var div = document.getElementById("d1");
+		div.style.display="block";
+		var appName = navigator.appName;
+		var appVersion = navigator.appVersion;
+		div.innerHTML = appName+" "+appVersion;
+
+    }
+	function b(){
+		var pop_left = (window.screen.width - 300)/2;
+		var pop_top = (window.screen.height - 200)/2;
+		var pms = 'width=300,height=200'+",top="+pop_top+",left="+pop_left;
+		
+		myWindow=window.open('',"屏幕分辨率",pms);
+		
+		myWindow.document.write(window.screen.width+"*"+window.screen.height);
+	}
+</script>
+</head>
+<body>
+<a href="#" onclick="a();">显示客户端浏览器名称和版本信息</a><br><br>
+<a href="#" onclick="b();">显示客户端屏幕分辨率信息</a>
+<div id="d1">das</div>
+</body>
+</html>

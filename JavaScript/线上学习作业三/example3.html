@@ -1,0 +1,38 @@
+<!--201451082337闫文博-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>百分制成绩转换为五等级制</title>
+</head>
+<body>
+    <p>输入闫文博学生百分制考试成绩：<input type="text" id="score"></p>
+    <p><button type="button" onclick="cal();">计算</button></p>
+    <p>转换后的五等级制成绩为：<span id = "result" style = "color:red"></span></p>
+</body>
+<script>
+    var score = document.getElementById("score");
+    var result = document.getElementById("result");
+    score.addEventListener("change",check);
+    function check() {
+        var a = document.getElementById("score").value;
+        if(isNaN(a)|Number(a)>100 || Number(a)<0){
+        alert("输入错误");
+        }
+    }
+    function cal() {
+        var a = Number(document.getElementById("score").value);
+        if(a<60){
+            result.innerHTML="不及格";
+        }else if(a<70){
+            result.innerHTML ="及格";
+        }else if(a<80){
+            result.innerHTML ="良好";
+        }else if(a<90){
+            result.innerHTML ="优秀";
+        }else if(a<100){
+            result.innerHTML ="卓越";
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!--201451082337闫文博-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>计算生肖</title>
+    </head>
+    <body>
+        <form id ="form1" name="form1" method="post" action="">
+            <fieldset>
+                <legend>根据出生年份计算生肖</legend>
+                <p align="center">请输入闫文博的出生年份
+                    <input name = "txtYear" type="text" id = "txtYear" size = "12">
+                    <input name = "btnShow" type="button" id = "btnShow" value = "显示生肖" onclick="showShengxiao();"> 
+                </p>
+                <p id = "Shengxiao" align="center">&nbsp;</p>
+            </fieldset>
+        </form>
+        <script>
+            var year = document.getElementById("txtYear");
+            var shengxiao = document.getElementById("Shengxiao");
+            function showShengxiao(){
+                var yearNum = year.value %12;
+                switch(yearNum) {
+                    case 0:
+                        shengxiao.innerHTML ="猴";
+                    break;
+                    case 1:
+                        shengxiao.innerHTML ="鸡";
+                    break;
+                    case 2:
+                        shengxiao.innerHTML ="狗";
+                    break;
+                    case 3:
+                        shengxiao.innerHTML ="猪";
+                    break;
+                    case 4:
+                        shengxiao.innerHTML ="鼠";
+                    break;
+                    case 5:
+                        shengxiao.innerHTML ="牛";
+                    break;
+                    case 6:
+                        shengxiao.innerHTML ="虎";
+                    break;
+                    case 7:
+                        shengxiao.innerHTML ="兔";
+                    break;
+                    case 8:
+                        shengxiao.innerHTML ="龙";
+                    break;
+                    case 9:
+                        shengxiao.innerHTML ="蛇";
+                    break;
+                    case 10:
+                        shengxiao.innerHTML ="马";
+                    break;
+                    case 11:
+                        shengxiao.innerHTML ="羊";
+                    break;
+                }
+                
+            }
+        </script>
+    </body>
+</html>

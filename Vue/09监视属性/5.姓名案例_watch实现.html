@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        姓：<input type="text" v-model:value="first"><br/>
+        名：<input type="text" v-model:value="last"><br/>
+        姓名：<span>{{fullname}}</span>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false;
+        var vm = new Vue({
+            el:"#root",
+            data: {
+                first: "张",
+                last: "三",
+                fullname:"张-三",
+            },
+            watch:{
+                first(newValue){
+                    setTimeout(() => {
+                        this.fullname = newValue+"-"+this.last;
+                    },1000)
+                },
+                last(newValue){
+                    this.fullname = this.first+"-"+newValue;
+                }
+            },
+            methods: {
+                
+            }
+        })
+    </script>
+</body>
+</html>

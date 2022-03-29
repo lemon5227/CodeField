@@ -1,0 +1,29 @@
+<!-- 201451082337 闫文博-->
+<!doctype html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>动态添加选项</title>
+</head>
+<body>
+  <fieldset>
+    <legend>下拉框动态添加选项</legend>
+     <select id = "sel" ></select>
+     <button id="addOpt">添加选项</button>
+  </fieldset>
+  <script>
+    var select = document.getElementById('sel');
+    var button = document.getElementById('addOpt');
+    var locations = ['涧西区','西工区','老城区','瀍河回族区','洛龙区','伊滨区','吉利区'];
+    document.getElementById('addOpt').addEventListener('click',function(){
+        for(var i=0;i< locations.length; i++){
+            var add_select = "<option value="+locations[i]+">"+locations[i]+"</option>";
+            
+            document.getElementById('sel').innerHTML += add_select;
+        }
+    })
+    
+</script>
+</body>
+</html>   
+</html>

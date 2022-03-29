@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript" src="../vue.js"></script>
+</head>
+<body>
+    <!-- v-pre指令 ：
+        1.跳过所在节点的编译过程
+        2.可利用他跳过没有使用指令和插值语法的节点，加快编译
+    -->
+    <div id="root">
+        <h1 v-cloak>Document</h1>
+        <h2 v-text="name"></h2>
+        <h1 v-html="str"></h1>
+        <h3 v-once>n的初始值为：{{n}}</h3>
+        <h3>n的现在值为：{{n}}</h3>
+        <button @click="n++">点我n+1</button>
+        <button v-pre @click="n++">点我n+1</button>
+    </div>
+</body>
+<script type="text/javascript">
+    var vm = new Vue({
+        el:"#root",
+        data: {
+            name:"尚硅谷",
+            str:"<h2>123456</h>",
+            n:10
+        }
+    });
+</script>
+</html>

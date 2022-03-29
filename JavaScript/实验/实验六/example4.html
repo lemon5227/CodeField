@@ -1,0 +1,42 @@
+<!--闫文博201451082337-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>统计浏览网页的时间</title>
+<style type="text/css">
+	body{
+		background:#f2f2f2;
+	}
+	p.hr{
+		width:200px;
+		border-top: 1px solid red;
+	}
+</style>
+<script type="text/javascript">
+    var d = new Date()
+    setInterval(Timetrack,1000);
+    function Timetrack(){
+        var now = new Date();
+        var seconds =parseInt((now.getTime() - d.getTime())/1000);
+        minutes = seconds/60;
+        minute = parseInt(minutes %60);
+        second = parseInt(seconds%60);
+        document.getElementById("timer").value = minute+"分"+second+"秒"
+    }
+
+</script>
+</head>
+<body onload=Timetrack()>
+	<center>
+		<h2>浏览所需时间</h2>
+		<p class="hr"></p>
+	</center>
+	<form name="form">
+     	<center>
+     		您已经花费了<input type="text" size="6" value="0分0秒" id="timer"> 
+		</center>
+   	</form>
+
+</body>
+</html>

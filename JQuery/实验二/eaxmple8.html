@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增减购物车商品信息</title>
+</head>
+<style type="text/css">
+    * {
+        font-size: 14px;
+    }
+
+    div.shop {
+        width: 600px;
+        text-align: center;
+    }
+
+    caption {
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+<script src="jquery-3.6.0.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#selectAll").click(function(){
+            $("input[name=cc]").prop("checked",$(this).prop("checked"))
+        })
+
+        $(".del").click(function(){
+            $(this).parent().parent().remove();
+        })
+
+        $("#delSelect").click(function(){
+            $("input:checked").parent().parent().remove()
+        })
+
+        $("#addSelect").click(function(){
+            console.log("aaa")
+            var choices = $("input:checked").prop("checked",false).parent().parent().clone();
+            if(choices.length == 0){
+                var clone = $("tr:last").clone()
+                $("table").append(clone)
+            }else{
+                $("table").append(choices)
+            }
+
+        })
+
+        $("input[type=text]").change(function(){
+            var num  = Number($(this).val());
+            if(num < 0){
+                alert("数量不能为负数")
+            }
+        })
+    })
+</script>
+<body>
+    <h1 align="center">软工2023班闫文博</h1>
+    <div class="shop">
+        <table border="1" cellpadding="0" cellspacing="0">
+            <caption>购物车商品信息</caption>
+            <tr>
+                <th><input type='checkbox' id="selectAll">全选/全不选</th>
+                <th>商品信息</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td><input name="cc" type="checkbox" class="ii1"></td>
+                <td><img src="images/sang.gif" class="products" /><a href="#">天堂雨伞</a></td>
+                <td>￥32.9元</td>
+                <td><input type="text" class="quantity" value="1"></td>
+                <td><a href="#" class="del">删除</a></td>
+            </tr>
+            <tr>
+                <td><input name="cc" type="checkbox" class="ii2"></td>
+                <td><img src="images/iphone.gif" class="products" /><a href="#">苹果手机iphone5</a></td>
+                <td>￥3339元</td>
+                <td><input type="text" class="quantity" value="1"> </td>
+                <td><a href="#" class="del">删除</a></td>
+            </tr>
+            <tr>
+                <td><input name="cc" type="checkbox"></td>
+                <td><img src='images/computer.jpg' class='products' /><a href='#'>联想笔记本电脑</a></td>
+                <td>￥3200元</td>
+                <td><input type="text" class="quantity" value="1"> </td>
+                <td><a href="#" class="del">删除</a></td>
+            </tr>
+        </table>
+        <br />
+        <input type="button" id="addSelect" value="添加">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="delSelect"
+            value="删除">
+    </div>
+</body>
+</html>

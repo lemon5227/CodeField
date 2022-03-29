@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组对象添加和删除</title>
+    <style>
+        table {
+            width: 800px;
+            margin: 10px auto;
+            border: 2px solid #000;
+            border-collapse: collapse;
+        }
+        
+        td {
+            border: 1px solid rgb(25, 26, 27);
+            /* width: 300px; */
+            height: 40px;
+            text-align: center;
+            line-height: 30px;
+            color: rgb(101, 13, 243);
+        }
+        
+        .arr {
+            width: 300px;
+        }
+        
+        .btn {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h3>随机生成一个包含5个元素的数组，并且元素为大于等于1小于等于10的整数</h3>
+            </td>
+        </tr>
+        <tr>
+            <td id="arr1" class="arr"></td>
+            <td class="btn"><input type="button" value="随机数组" onclick="fnArr1()"></td>
+
+        </tr>
+        <tr>
+
+            <td id="arr2" class="arr"></td>
+            <td class="btn"><input type="button" value="尾部添加你的学号" onclick="fnArr2()"></td>
+        </tr>
+        <tr>
+            <td id="arr3" class="arr"></td>
+            <td class="btn"><input type="button" value="头部添加你的班级姓名" onclick="fnArr3()"></td>
+        </tr>
+        <tr>
+
+            <td id="arr4" class="arr"></td>
+            <td class="btn"><input type="button" value="删除学号" onclick="fnArr4()"></td>
+        </tr>
+        <tr>
+            <td id="arr5" class="arr"></td>
+            <td class="btn"><input type="button" value="删除班级" onclick="fnArr5()"></td>
+        </tr>
+    </table>
+</body>
+    <script>
+        var arr1 = document.getElementById('arr1');
+        var arr2 = document.getElementById('arr2');
+        var arr3 = document.getElementById('arr3');
+        var arr4 = document.getElementById('arr4');
+        var arr5 = document.getElementById('arr5');
+        var arr = [];
+        function fnArr1(){
+            for (var i = 0; i <5;i++){
+                arr[i] = Math.floor(Math.random()*10)+1;
+            }
+            arr1.innerHTML = arr;
+        }
+        function fnArr2(){
+            arr2.innerHTML = arr[0]+"*"+arr[1]+"*"+arr[2]+"*"+arr[3]+"*"+arr[4]+"*"+"201451082337";
+            
+        }
+
+        function fnArr3(){
+            arr3.innerHTML = "2023班"+"*闫文博"+arr[0]+"*"+arr[1]+"*"+arr[2]+"*"+arr[3]+"*"+arr[4]+"*";
+        }
+
+        function fnArr4(){
+            arr4.innerHTML ="2023班"+"*闫文博"+arr[0]+"*"+arr[1]+"*"+arr[2]+"*"+arr[3]+"*"+arr[4]+"*";
+        }
+
+        function fnArr5(){
+            arr5.innerHTML ="闫文博"+arr[0]+"*"+arr[1]+"*"+arr[2]+"*"+arr[3]+"*"+arr[4];
+        }
+
+    </script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        姓：<input type="text" v-model:value="first"><br/>
+        名：<input type="text" v-model:value="last"><br/>
+        姓名：<span>{{fullname}}</span>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false;
+        var vm = new Vue({
+            el:"#root",
+            data: {
+                first: "张",
+                last: "三"
+            },
+            computed:{
+                /* fullname:{
+                    get(){
+                        console.log("get被调用了");
+                        return this.first+this.last;
+                    },
+                    //set什么时候调用
+                    set(value) {
+                        console.log("set被调用",value);
+                        var arr = value.split("-");
+                        this.first = arr[0];
+                        this.last = arr[1];
+                    }
+                } */
+                //简写，只考虑读取不考虑修改才用简写
+                fullname(){
+                    console.log("get被调用了");
+                    return this.first+this.last;
+                }
+            },
+            methods: {
+                
+            }
+        })
+    </script>
+</body>
+</html>

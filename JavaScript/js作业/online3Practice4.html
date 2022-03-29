@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组翻转、排序、去重</title>
+    <style>
+        table {
+            width: 800px;
+            margin: 10px auto;
+            border: 2px solid #000;
+            border-collapse: collapse;
+        }
+        
+        td {
+            border: 1px solid rgb(25, 26, 27);
+            /* width: 300px; */
+            height: 40px;
+            text-align: center;
+            line-height: 30px;
+            color: rgb(101, 13, 243);
+        }
+        
+        .arr {
+            width: 300px;
+        }
+        
+        .btn {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td colspan="2">
+                <h3>对学号包含的数字组成的数组进行排序、去重操作</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">我是软工2023班闫文博，我的学号对应的数组为[2,0,1,4,5,1,0,8,2,3,3,7]</td>
+        </tr>
+        <tr>
+            <td id="reverseArr" class="arr"></td>
+            <td class="btn"><input type="button" value="翻转数组" onclick="reverseArr1()"></td>
+        </tr>
+        <tr>
+            <td id="sortArr" class="arr"></td>
+            <td class="btn"><input type="button" value="从小到大对数组排序" onclick="sortArr1()"></td>
+        </tr>
+        <tr>
+            <td id="uniqueArr" class="arr"></td>
+            <td class="btn"><input type="button" value="数组去重" onclick="uniqueArr1()"></td>
+        </tr>
+    </table>
+    <script>
+        var uniqueArr = document.getElementById("uniqueArr");
+        var arr = [2,0,1,4,5,1,0,8,2,3,3,7];
+        var reverseArr = document.getElementById("reverseArr");
+        var sortArr = document.getElementById("sortArr");
+        
+        function reverseArr1(){
+            var i =0;
+            while (i == arr.length-i){
+                var temp = arr[i];
+                arr[i] = arr[arr.length-i];
+                arr[arr.length-i] = temp;
+                i++;
+            }
+            reverseArr.innerHTML = arr;
+        }
+
+        function sortArr1(){
+            arr.sort();
+            sortArr.innerHTML = arr;
+        }
+
+        function uniqueArr1(){
+            uniqueArr.innerHTML = Array.from(new Set(arr));
+        }
+    </script>
+
+</body>
+
+</html>
