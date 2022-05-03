@@ -9,6 +9,7 @@
     <div id="root">
         <h2 >当前的n值为：{{n}}</h2>
         <button @click="add">点我n+1</button>
+        <button @click="bye">点我销毁vm</button>
     </div>
 
 </body>
@@ -20,7 +21,12 @@
         },
         methods: {
             add(){
+                console.log("add");
                 this.n++
+            },
+            bye(){
+                console.log("bye")
+                this.$destroy()
             }
         },
         beforeCreate() {
@@ -33,7 +39,16 @@
         },
         beforeMount() {
             console.log("beforeMount")
-            debugger
+        },
+        mounted() {
+            console.log("mounted")
+        },
+        beforeUpdate() {
+            console.log("beforeUpdate")
+            
+        },
+        updated() {
+            console.log("updated")
         },
     });
 </script>
